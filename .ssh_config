@@ -1,0 +1,10 @@
+Host spud spud.spa.umn.edu
+    Hostname spud.spa.umn.edu
+    User yuka
+    ForwardX11 yes
+
+Host odyssey holybicep01
+    HostName localhost
+    ProxyJump spud
+    Port 1649
+    ForwardX11 yes

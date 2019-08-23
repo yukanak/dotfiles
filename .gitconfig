@@ -1,0 +1,8 @@
+# git config
+[user]
+	name = Yuka Nakato
+	email = nakat013@umn.edu
+[github.com]
+	user = yukanak
+[push]
+    default = current
