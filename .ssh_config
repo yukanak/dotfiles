@@ -1,3 +1,13 @@
+Host sherlock login.sherlock.stanford.edu
+    Hostname login.sherlock.stanford.edu
+    User yukanaka
+    ForwardX11 yes
+
+Host slac centos7.slac.stanford.edu
+    Hostname centos7.slac.stanford.edu
+    User yukanaka
+    ForwardX11 yes
+
 Host spud spud.spa.umn.edu
     Hostname spud.spa.umn.edu
     User yuka
@@ -7,4 +17,48 @@ Host odyssey holybicep01
     HostName localhost
     ProxyJump spud
     Port 1649
+    ForwardX11 yes
+
+# SMURF at Stanford
+Host smurf-srv24
+     User cryo
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     Compression yes
+     GSSAPIAuthentication yes
+     GSSAPIDelegateCredentials yes
+     HostName smurf-srv24.slac.stanford.edu
+
+Host smurf-srv03 smurf-srv12
+    User cryo
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    Compression yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+    ProxyCommand ssh -W %h:%p umux@171.64.108.89
+
+Host smurf-srv14
+    User cryo
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    Compression yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+    HostName 132.239.66.238
+    Port 222
+
+Host smurf-srv11
+    User cryo
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    Compression yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+    HostName smurf-srv11.slac.stanford.edu
+
+# SMURF at CalTech
+Host smurf-caltech
+    Hostname 131.215.193.184
+    User cryo
     ForwardX11 yes
