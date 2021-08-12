@@ -1,3 +1,19 @@
+Host badaq 
+    Hostname 171.64.109.88
+    User badaq
+    ForwardX11 yes
+    ProxyJump smurf-srv12
+
+Host scott scott.grid.uchicago.edu
+    Hostname scott.grid.uchicago.edu
+    User yukanakato
+    ForwardX11 yes
+
+Host amundsen amundsen.grid.uchicago.edu
+    Hostname amundsen.grid.uchicago.edu
+    User yukanakato
+    ForwardX11 yes
+
 Host sherlock login.sherlock.stanford.edu
     Hostname login.sherlock.stanford.edu
     User yukanaka
