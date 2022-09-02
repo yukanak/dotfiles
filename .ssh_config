@@ -1,4 +1,10 @@
-Host badaq 
+Host ba4 Yuka-desktop
+    Hostname Yuka-desktop
+    User ba4
+    ForwardX11 yes
+    ProxyJump smurf-srv12
+
+Host badaq ba4-gcp
     Hostname 171.64.109.88
     User badaq
     ForwardX11 yes
@@ -18,6 +24,9 @@ Host sherlock login.sherlock.stanford.edu
     Hostname login.sherlock.stanford.edu
     User yukanaka
     ForwardX11 yes
+    ForwardX11Trusted yes
+    ControlMaster auto
+    ControlPath ~/.ssh/controlmasters/%r@%h:%p
 
 Host slac centos7.slac.stanford.edu
     Hostname centos7.slac.stanford.edu
