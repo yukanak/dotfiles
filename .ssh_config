@@ -1,14 +1,31 @@
+Host s3df s3dflogin.slac.stanford.edu
+    Hostname s3dflogin.slac.stanford.edu
+    User yukanaka
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+Host caltech-pyhk ba.pyhk.net
+    Hostname ba.pyhk.net
+    User bicep
+    ForwardX11 yes
+    ProxyJump caltech-bamce
+
+Host caltech-bamce bamce.caltech.edu
+    Hostname bamce.caltech.edu
+    User mce
+    ForwardX11 yes
+
 Host ba4 Yuka-desktop
     Hostname Yuka-desktop
     User ba4
     ForwardX11 yes
-    ProxyJump smurf-srv12
+    ProxyJump umux
 
 Host badaq ba4-gcp
     Hostname 171.64.109.88
     User badaq
     ForwardX11 yes
-    ProxyJump smurf-srv12
+    ProxyJump umux
 
 Host scott scott.grid.uchicago.edu
     Hostname scott.grid.uchicago.edu
@@ -38,10 +55,15 @@ Host spud spud.spa.umn.edu
     User yuka
     ForwardX11 yes
 
-Host odyssey holybicep01
+Host odyssey bicep-dev
     HostName localhost
     ProxyJump spud
     Port 1649
+    ForwardX11 yes
+
+Host umux
+    HostName 171.64.108.89
+    User umux
     ForwardX11 yes
 
 # SMURF at Stanford
